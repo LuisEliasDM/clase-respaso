@@ -1,0 +1,7 @@
+Pokemon
+<input type="text" [(ngModel)]="search" (input)="changeSearch()">
+
+<div *ngIf="pokemon$ | async as pokemon">
+    {{pokemon.name}} <br>
+    <img [src]="pokemon.sprites.front_default" alt="">
+</div>
